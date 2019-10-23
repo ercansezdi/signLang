@@ -1,93 +1,126 @@
+#-*- coding:utf-8 -*-
+"""
+    ### Works ###
 
-#!/usr/bin/env python
-# -*- coding: utf8 -*-
+    renk filtresi uygularken yeşil filtre sari ile karışıyor.
+    renk filtresi uygularken mavi filtre çok karıştırıyor.
+    renk filtresi uygularken siyah filtre algılaması çok az
 
-__auther__ = 'Ercan Sezdi'
-__version__ = '0.2'
-__eposta__ = "ercansezdizero@gmail.com"
+"""
+__author__ = "Ercan Sezdi"
+__version__ = 0.2
 
 import cv2
 import numpy as np
+import os
+import configparser
+from matplotlib import pyplot as plt
 
-class signLang:
+
+class signLangSave:
     def __init__(self):
-        self.camera = cv2.VideoCapture(0)
-        self.kernel = np.ones((6,6),np.uint8)
-        self.test_photo = cv2.imread("data/pokemon_games.png")#"data/pic_1.jpg",0)
-        self.red = [[17, 15, 100], [50, 56, 200]]
-        self.green = [[40, 40,40], [70, 255,255]]
-        self.blue = [[86, 31, 4], [220, 88, 50]]
-        self.yellow = [[25, 146, 190], [62, 174, 250]]
-        self.color_choice = self.red
+        self.conf()
+        self.mkdir()
+        self.pic_counter()
         self.loop()
-
+    def conf(self):
+        self.config = configparser.ConfigParser()
+        self.config.read("conf\\data.cfg")
+        self.camera = cv2.VideoCapture(3)
+        self.kernel = np.ones((6, 6), np.uint8)
+        lower_red = np.array([int(x) for x in self.config["veri"]["lower_red"].split(",")])  # ok
+        upper_red = np.array([int(x) for x in self.config["veri"]["upper_red"].split(",")])  # ok
+        lower_green = np.array([int(x) for x in self.config["veri"]["lower_green"].split(",")])
+        upper_green = np.array([int(x) for x in self.config["veri"]["upper_green"].split(",")])
+        lower_blue = np.array([int(x) for x in self.config["veri"]["lower_blue"].split(",")])
+        upper_blue = np.array([int(x) for x in self.config["veri"]["upper_blue"].split(",")])
+        lower_yellow = np.array([int(x) for x in self.config["veri"]["lower_yellow"].split(",")])
+        upper_yellow = np.array([int(x) for x in self.config["veri"]["upper_yellow"].split(",")])
+        lower_black = np.array([int(x) for x in self.config["veri"]["lower_black"].split(",")])
+        upper_black = np.array([int(x) for x in self.config["veri"]["upper_black"].split(",")])
+        self.color_row = ["red", "gre", "blu", "yel", "bla"]
+        self.colors = {"red": [lower_red, upper_red], "gre": [lower_green, upper_green],
+                       "blu": [lower_blue, upper_blue], "yel": [lower_yellow, upper_yellow],
+                       "bla": [lower_black, upper_black]}
+    def mkdir(self):
+        if not(os.path.exists("proc_pict")):
+            os.mkdir("proc_pict")
+        if not(os.path.exists("proc_pict/" + str(self.color_row[0]))):
+            os.mkdir("proc_pict/" + str(self.color_row[0]))
+        if not(os.path.exists("proc_pict/" + str(self.color_row[1]))):
+            os.mkdir("proc_pict/" + str(self.color_row[1]))
+        if not(os.path.exists("proc_pict/" + str(self.color_row[2]))):
+            os.mkdir("proc_pict/" + str(self.color_row[2]))
+        if not(os.path.exists("proc_pict/" + str(self.color_row[3]))):
+            os.mkdir("proc_pict/" + str(self.color_row[3]))
+        if not(os.path.exists("proc_pict/" + str(self.color_row[4]))):
+            os.mkdir("proc_pict/" + str(self.color_row[4]))
+        if not(os.path.exists("conf/")):
+            os.mkdir("conf/")
+    def pic_counter(self):
+        file_address = os.getcwd()
+        files = os.listdir(file_address + "\\proc_pict\\red")
+        self.save_num = len(files) + 1
     def loop(self):
-        self.choice = "video"
-        if self.choice == "video":
+        counter = 0
+        while True:
 
-            while True:
-                self.ret,self.frame = self.camera.read()
-                #self.frame = self.frame[0:350,0:350]
-                self.hsv = cv2.cvtColor(self.frame,cv2.COLOR_BGR2HSV) #görüntüyü hsv formatına cevirdim
+            self.ret, self.frame = self.camera.read()
+            self.hsv = cv2.cvtColor(self.frame, cv2.COLOR_BGR2HSV)  # görüntüyü hsv formatına cevirdim
+            self.renkFiltresi = cv2.inRange(self.hsv, self.colors[self.color_row[counter]][0],self.colors[self.color_row[counter]][1])
+            self.renkFiltresi = cv2.morphologyEx(self.renkFiltresi, cv2.MORPH_CLOSE, self.kernel)  # boşluk doldurma
+            self.res = cv2.bitwise_and(self.frame,self.frame,mask=self.renkFiltresi)
+            self.result = self.frame.copy()
+            self.hand_result = self.result
+            cnts, hierarchy = cv2.findContours(self.renkFiltresi, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
-                altDeger = np.array([0,20,50]) #sarı
-                #altDeger = np.array([237,100,0])
-                ustDeger = np.array([40,255,255])
+            max_genislik = 0
+            max_uzunluk = 0
+            max_index = -1
 
-                self.renkFiltresi = cv2.inRange(self.hsv,altDeger,ustDeger) # hsv yi alt ve üst değerlere göre filtreledik
-                self.renkFiltresi = cv2.morphologyEx(self.renkFiltresi,cv2.MORPH_CLOSE,self.kernel) # boşluk doldurma
-                self.result = self.frame.copy()
-                cnts , hierarchy = cv2.findContours(self.renkFiltresi,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
+            for t in range(len(cnts)):
+                cnt = cnts[t]
+                x, y, w, h = cv2.boundingRect(cnt)
+                if (w > max_genislik and h > max_uzunluk):
+                    max_uzunluk = h
+                    max_genislik = w
+                    max_index = t
+            if len(cnts) > 0:
 
-                max_genislik = 0
-                max_uzunluk =  0
-                max_index   = -1
-
-                for t in range(len(cnts)):
-                    cnt = cnts[t]
-                    x,y,w,h = cv2.boundingRect(cnt)
-                    if (w > max_genislik and h > max_uzunluk):
-                        max_uzunluk = h
-                        max_genislik = w
-                        max_index = t
-
-
-                if len(cnts) > 0 :
-                    x,y,w,h = cv2.boundingRect(cnts[max_index])
-                    cv2.rectangle(self.result,(x,y),(x+w,y+h),(0,255,0),2)
-                    self.hand_result = self.renkFiltresi[y:y+h,x:x+w]
-
-                    #cv2.imshow("hand_result",resized_image)#self.hand_result)
-
-
-                #cv2.imshow('camera', self.frame)
-                #cv2.imshow("Renk Filtresi",self.renkFiltresi)
-                #self.result=cv2.resize(result,(100,100))
-                #cv2.imshow("Result",self.result)
-
-                if cv2.waitKey(1)&0xFF == ord('q'):
+                x, y, w, h = cv2.boundingRect(cnts[max_index])
+                cv2.rectangle(self.result, (x, y), (x + w, y + h), (0, 255, 0), 2)
+                self.hand_result = self.renkFiltresi[y:y + h, x:x + w]
+                cv2.imshow("result", self.hand_result)
+            cv2.putText(self.result,str(self.color_row[counter]), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
+            cv2.imshow("orjinal image", self.result)
+            if cv2.waitKey(1) & 0xFF == ord("s"):
+                cv2.imwrite("proc_pict\\" + self.color_row[counter] + "\\" + str(self.save_num) + ".png", self.hand_result)
+                print("Image Saved for ", self.color_row[counter])
+                counter += 1
+                if counter == 5:
                     self.end()
-
-        elif self.choice == "photo":
-            print(self.color_choice[0])
-            hsv = cv2.cvtColor(self.test_photo,cv2.COLOR_BGR2HSV)
-            lower = np.array(self.color_choice[0])
-            upper = np.array(self.color_choice[1])
-            result = cv2.inRange(hsv,lower,upper)
-            cv2.imshow("Original Image ",self.test_photo)
-            cv2.imshow("result",result)
-
-            cv2.waitKey(0)
-
-        else:
-            pass
-
-
-
+            if cv2.waitKey(1) & 0xFF == ord("q"):
+                self.end()
     def end(self):
-        #cv2.imwrite("data/one.jpg",self.hand_result)
         self.camera.release()
         cv2.destroyAllWindows()
 
+class signLangHis:
+    def __init__(self):
+        self.pic_counter()
+        self.loop()
+    def pic_counter(self):
+        file_address = os.getcwd()
+        files = os.listdir(file_address + "\\proc_pict\\red")
+        self.save_num = len(files)
+    def loop(self):
+        for folder in ["red","gre","blu","yel","bla"]:
+            counter = 1
+            while counter < self.save_num:
+                address = "proc_pict\\" +  folder + "\\" + str(counter) + ".png"
+                img = cv2.imread(address, 0)
+                hist = cv2.calcHist([img], [0], None, [256], [0, 256])
+                counter += 1
+
 if __name__ == "__main__":
-    run = signLang()
+    run = signLangSave()
