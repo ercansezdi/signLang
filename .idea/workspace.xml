@@ -2,9 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfdbc1ba-ef2e-4a1a-b451-e1a674badd74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/color_hand_detect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hand_detect_his.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hand_detect.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/his_hand_detect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/A/gray_A0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/A/gray_A1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_A0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_A1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/B/gray_B0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/B/gray_B1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_B0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_B1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/C/gray_C0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/C/gray_C1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_C0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_C1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/D/gray_D0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/D/gray_D1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_D0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_D1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/E/gray_E0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/E/gray_E1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/E/rgb_E0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/E/rgb_E1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/color_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/color_detect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/color_hand_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/color_hand_detect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hand_detect_his.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +88,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_code">
+  <component name="RunManager" selected="Python.his_hand_detect">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="signLanguage" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,7 +152,26 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="python" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="hand_detect_his" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="signLanguage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hand_detect_his.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="his_hand_detect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="signLanguage" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -143,29 +184,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sayi_tahmin_oyunu" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="signLanguage" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../Masaüstü" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../Masaüstü/sayi_tahmin_oyunu.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/his_hand_detect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -195,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.his_hand_detect" />
+        <item itemvalue="Python.hand_detect_his" />
         <item itemvalue="Python.test_code" />
         <item itemvalue="Python.hand_detect" />
         <item itemvalue="Python.detect_color" />
-        <item itemvalue="Python.python" />
-        <item itemvalue="Python.sayi_tahmin_oyunu" />
       </list>
     </recent_temporary>
   </component>
@@ -223,8 +242,16 @@
       <workItem from="1571724524991" duration="2075000" />
       <workItem from="1571769956600" duration="14526000" />
       <workItem from="1571811873883" duration="211000" />
-      <workItem from="1571867122551" duration="4128000" />
+      <workItem from="1571867122551" duration="8227000" />
     </task>
+    <task id="LOCAL-00001" summary="test pycharm">
+      <created>1571881320019</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571881320019</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +272,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="test pycharm" />
+    <option name="LAST_COMMIT_MESSAGE" value="test pycharm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -261,13 +290,15 @@
     <SUITE FILE_PATH="coverage/signLanguage$detect_color.coverage" NAME="detect_color Coverage Results" MODIFIED="1571771323549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLang$detect_color.coverage" NAME="detect_color Coverage Results" MODIFIED="1571811705295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$sayi_tahmin_oyunu.coverage" NAME="sayi_tahmin_oyunu Coverage Results" MODIFIED="1571719561705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Masaüstü" />
-    <SUITE FILE_PATH="coverage/signLanguage$run.coverage" NAME="run Coverage Results" MODIFIED="1571613417724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$python.coverage" NAME="python Coverage Results" MODIFIED="1571803164664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/signLanguage$assas.coverage" NAME="assas Coverage Results" MODIFIED="1571613797737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/signLang$test_code.coverage" NAME="test_code Coverage Results" MODIFIED="1571881010192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/signLang$hand_detect_his.coverage" NAME="hand_detect_his Coverage Results" MODIFIED="1571887143652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/signLang$his_hand_detect.coverage" NAME="his_hand_detect Coverage Results" MODIFIED="1571888073622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$delete.coverage" NAME="delete Coverage Results" MODIFIED="1571719307395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/signLang$hand_detect.coverage" NAME="hand_detect Coverage Results" MODIFIED="1571880618361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$test_code.coverage" NAME="test_code Coverage Results" MODIFIED="1571613702114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/signLanguage$run.coverage" NAME="run Coverage Results" MODIFIED="1571613417724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/signLanguage$assas.coverage" NAME="assas Coverage Results" MODIFIED="1571613797737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/signLang$test_code.coverage" NAME="test_code Coverage Results" MODIFIED="1571886542529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/signLang$hand_detect.coverage" NAME="hand_detect Coverage Results" MODIFIED="1571880618361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$hand_detect.coverage" NAME="hand_detect Coverage Results" MODIFIED="1571811334335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
