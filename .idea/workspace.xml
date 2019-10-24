@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfdbc1ba-ef2e-4a1a-b451-e1a674badd74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/his_hand_detect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/A/gray_A0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/A/gray_A1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_A0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_A1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/B/gray_B0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/B/gray_B1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_B0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_B1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/C/gray_C0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/C/gray_C1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_C0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_C1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/D/gray_D0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/D/gray_D1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_D0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_D1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/E/gray_E0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/E/gray_E1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/E/rgb_E0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/E/rgb_E1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/test_images/gray_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pure_pict/test_images/rgb_0.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/color_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/color_detect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/color_hand_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/color_hand_detect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hand_detect_his.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/his_hand_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/his_hand_detect.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +221,7 @@
       <workItem from="1571724524991" duration="2075000" />
       <workItem from="1571769956600" duration="14526000" />
       <workItem from="1571811873883" duration="211000" />
-      <workItem from="1571867122551" duration="8227000" />
+      <workItem from="1571867122551" duration="11131000" />
     </task>
     <task id="LOCAL-00001" summary="test pycharm">
       <created>1571881320019</created>
@@ -292,7 +271,7 @@
     <SUITE FILE_PATH="coverage/signLanguage$sayi_tahmin_oyunu.coverage" NAME="sayi_tahmin_oyunu Coverage Results" MODIFIED="1571719561705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../Masaüstü" />
     <SUITE FILE_PATH="coverage/signLanguage$python.coverage" NAME="python Coverage Results" MODIFIED="1571803164664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLang$hand_detect_his.coverage" NAME="hand_detect_his Coverage Results" MODIFIED="1571887143652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/signLang$his_hand_detect.coverage" NAME="his_hand_detect Coverage Results" MODIFIED="1571888073622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/signLang$his_hand_detect.coverage" NAME="his_hand_detect Coverage Results" MODIFIED="1571890568202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$delete.coverage" NAME="delete Coverage Results" MODIFIED="1571719307395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$test_code.coverage" NAME="test_code Coverage Results" MODIFIED="1571613702114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$run.coverage" NAME="run Coverage Results" MODIFIED="1571613417724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
