@@ -28,8 +28,8 @@ class signLangSave:
         self.config.read("conf\\data.cfg")
         self.camera = cv2.VideoCapture(3)
         self.kernel = np.ones((6, 6), np.uint8)
-        lower_red = np.array([int(x) for x in self.config["veri"]["lower_red"].split(",")])  # ok
-        upper_red = np.array([int(x) for x in self.config["veri"]["upper_red"].split(",")])  # ok
+        lower_red = np.array([int(x) for x in self.config["veri"]["lower_red"].split(",")])
+        upper_red = np.array([int(x) for x in self.config["veri"]["upper_red"].split(",")])
         lower_green = np.array([int(x) for x in self.config["veri"]["lower_green"].split(",")])
         upper_green = np.array([int(x) for x in self.config["veri"]["upper_green"].split(",")])
         lower_blue = np.array([int(x) for x in self.config["veri"]["lower_blue"].split(",")])
@@ -85,14 +85,16 @@ class signLangSave:
                     max_uzunluk = h
                     max_genislik = w
                     max_index = t
-            if len(cnts) > 0:
 
+            if len(cnts) > 0:
                 x, y, w, h = cv2.boundingRect(cnts[max_index])
                 cv2.rectangle(self.result, (x, y), (x + w, y + h), (0, 255, 0), 2)
                 self.hand_result = self.renkFiltresi[y:y + h, x:x + w]
                 cv2.imshow("result", self.hand_result)
+
             cv2.putText(self.result,str(self.color_row[counter]), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
             cv2.imshow("orjinal image", self.result)
+
             if cv2.waitKey(1) & 0xFF == ord("s"):
                 cv2.imwrite("proc_pict\\" + self.color_row[counter] + "\\" + str(self.save_num) + ".png", self.hand_result)
                 print("Image Saved for ", self.color_row[counter])
@@ -112,15 +114,19 @@ class signLangHis:
     def pic_counter(self):
         file_address = os.getcwd()
         files = os.listdir(file_address + "\\proc_pict\\red")
-        self.save_num = len(files)
+        self.save_num = len(files) + 1
     def loop(self):
         for folder in ["red","gre","blu","yel","bla"]:
             counter = 1
+            array = []
             while counter < self.save_num:
                 address = "proc_pict\\" +  folder + "\\" + str(counter) + ".png"
-                img = cv2.imread(address, 0)
-                hist = cv2.calcHist([img], [0], None, [256], [0, 256])
-                counter += 1
 
+                hist = cv2.calcHist([address], [0, 1, 2], None, [8, 8, 8],
+                                    [0, 256, 0, 256, 0, 256])
+                hist = cv2.normalize(hist, hist).flatten()
+                cv2.compareHist
+                counter += 1
+            print(array)
 if __name__ == "__main__":
-    run = signLangSave()
+    run = signLangHis()

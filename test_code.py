@@ -1,53 +1,43 @@
-
-import cv2
+from __future__ import print_function
+from __future__ import division
+import cv2 as cv
 import numpy as np
 
-class signLang:
-    def __init__(self):
-        self.camera = cv2.VideoCapture(1)
-        self.kernel = np.ones((12, 12), np.uint8)
-        self.loop()
 
+src_base = cv.imread("proc_pict\\red\\1.png")
+src_test1 = cv.imread("proc_pict\\yel\\1.png")
+src_test2 = cv.imread("proc_pict\\bla\\1.png")
+if src_base is None or src_test1 is None or src_test2 is None:
+    print('Could not open or find the images!')
+    exit(0)
+hsv_base = cv.cvtColor(src_base, cv.COLOR_BGR2HSV)
+hsv_test1 = cv.cvtColor(src_test1, cv.COLOR_BGR2HSV)
+hsv_test2 = cv.cvtColor(src_test2, cv.COLOR_BGR2HSV)
+hsv_half_down = hsv_base[hsv_base.shape[0]//2:,:]
+h_bins = 50
+s_bins = 60
+histSize = [h_bins, s_bins]
+# hue varies from 0 to 179, saturation from 0 to 255
+h_ranges = [0, 180]
+s_ranges = [0, 256]
+ranges = h_ranges + s_ranges # concat lists
+# Use the 0-th and 1-st channels
+channels = [0, 1]
+hist_base = cv.calcHist([hsv_base], channels, None, histSize, ranges, accumulate=False)
+cv.normalize(hist_base, hist_base, alpha=0, beta=1, norm_type=cv.NORM_MINMAX)
 
-    def loop(self):
-        while True:
-            self.ret, self.frame = self.camera.read()
+hist_half_down = cv.calcHist([hsv_half_down], channels, None, histSize, ranges, accumulate=False)
+cv.normalize(hist_half_down, hist_half_down, alpha=0, beta=1, norm_type=cv.NORM_MINMAX)
 
-            self.hsv = cv2.cvtColor(self.frame, cv2.COLOR_BGR2HSV)  # görüntüyü hsv formatına cevirdim
-            altDeger = np.array([35, 140, 60]) #blue
-            ustDeger = np.array([255, 255, 180])
-            self.renkFiltresi = cv2.inRange(self.hsv, altDeger,ustDeger)  # hsv yi alt ve üst değerlere göre filtreledik
-            self.renkFiltresi = cv2.morphologyEx(self.renkFiltresi, cv2.MORPH_CLOSE, self.kernel)  # boşluk doldurma
-            self.res = cv2.bitwise_and(self.frame,self.frame,mask=self.renkFiltresi)
-            self.result = self.frame.copy()
-            cnts, hierarchy = cv2.findContours(self.renkFiltresi, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
+hist_test1 = cv.calcHist([hsv_test1], channels, None, histSize, ranges, accumulate=False)
+cv.normalize(hist_test1, hist_test1, alpha=0, beta=1, norm_type=cv.NORM_MINMAX)
 
-            max_genislik = 0
-            max_uzunluk = 0
-            max_index = -1
+hist_test2 = cv.calcHist([hsv_test2], channels, None, histSize, ranges, accumulate=False)
+cv.normalize(hist_test2, hist_test2, alpha=0, beta=1, norm_type=cv.NORM_MINMAX)
 
-            for t in range(len(cnts)):
-                cnt = cnts[t]
-                x, y, w, h = cv2.boundingRect(cnt)
-                if (w > max_genislik and h > max_uzunluk):
-                    max_uzunluk = h
-                    max_genislik = w
-                    max_index = t
-            if len(cnts) > 0:
-
-                x, y, w, h = cv2.boundingRect(cnts[max_index])
-                cv2.rectangle(self.result, (x, y), (x + w, y + h), (0, 255, 0), 2)
-                self.hand_result = self.renkFiltresi[y:y + h, x:x + w]
-                cv2.imshow("result", self.hand_result)
-
-            cv2.imshow("orjinal image", self.result)
-
-
-            if cv2.waitKey(1) & 0xFF == ord("q"):
-                self.end()
-
-    def end(self):
-        self.camera.release()
-        cv2.destroyAllWindows()
-if __name__ == "__main__":
-    run = signLang()
+for compare_method in range(4):
+    base_base = cv.compareHist(hist_base, hist_base, compare_method)
+    base_half = cv.compareHist(hist_base, hist_half_down, compare_method)
+    base_test1 = cv.compareHist(hist_base, hist_test1, compare_method)
+    base_test2 = cv.compareHist(hist_base, hist_test2, compare_method)
+    print('Method:', compare_method, 'Base-Base = {}, Base-Half = {}, Base-Test(1) = {}, Base-Test(2) = {} '.format(base_base, base_half, base_test1,base_test2))
