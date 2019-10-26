@@ -2,54 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfdbc1ba-ef2e-4a1a-b451-e1a674badd74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/eski/pure_pict_/test_images/rgb_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eski/pure_pict_/test_images/rgb_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_cut_A0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_cut_A1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_full_A0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_full_A1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_cut_B0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_cut_B1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_full_B0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_full_B1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_cut_C0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_cut_C1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_full_C0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_full_C1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_cut_D0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_cut_D1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_full_D0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_full_D1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/W/rgb_cut_W0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/W/rgb_cut_W1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/W/rgb_full_W0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pure_pict/compare_images/W/rgb_full_W1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_code_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eski/signLangv_01.rar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/color_hand_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/color_hand_detect.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/his_hand_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/his_hand_detect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/A/gray_A0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/A/gray_A0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/A/gray_A1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/A/gray_A1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_A0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/A/rgb_A0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_A1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/A/rgb_A1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/B/gray_B0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/B/gray_B0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/B/gray_B1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/B/gray_B1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_B0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/B/rgb_B0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_B1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/B/rgb_B1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/C/gray_C0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/C/gray_C0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/C/gray_C1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/C/gray_C1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_C0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/C/rgb_C0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_C1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/C/rgb_C1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/D/gray_D0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/D/gray_D0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/D/gray_D1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/D/gray_D1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_D0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/D/rgb_D0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_D1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/D/rgb_D1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/E/gray_E0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/E/gray_E0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/E/gray_E1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/E/gray_E1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/E/rgb_E0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/E/rgb_E0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/E/rgb_E1.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/compare_images/E/rgb_E1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/test_images/gray_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/eski/pure_pict_/test_images/gray_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pure_pict/test_images/rgb_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_cut_A0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_cut_A1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_full_A0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/A/rgb_full_A1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_cut_B0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_cut_B1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_full_B0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/B/rgb_full_B1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_cut_C0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_cut_C1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_full_C0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/C/rgb_full_C1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_cut_D0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_cut_D1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_full_D0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/D/rgb_full_D1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/W/rgb_cut_W0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/W/rgb_cut_W1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/W/rgb_full_W0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pure_pict/compare_images/W/rgb_full_W1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_code.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,6 +75,11 @@
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myUseExistingConsole" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ercan\OneDrive\Belgeler\GitHub\signLang" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -157,32 +138,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="hand_detect_his" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="his_hand_detect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="signLanguage" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hand_detect_his.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="his_hand_detect" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="signLanguage" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -242,10 +204,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="testttt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="signLanguage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testttt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.hand_detect" />
+      <item itemvalue="Python.his_hand_detect" />
+      <item itemvalue="Python.test_code" />
+      <item itemvalue="Python.test_code_2" />
+      <item itemvalue="Python.testttt" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.his_hand_detect" />
-        <item itemvalue="Python.hand_detect_his" />
+        <item itemvalue="Python.testttt" />
         <item itemvalue="Python.test_code" />
         <item itemvalue="Python.test_code_2" />
         <item itemvalue="Python.hand_detect" />
@@ -274,7 +265,11 @@
       <workItem from="1571811873883" duration="211000" />
       <workItem from="1571867122551" duration="11131000" />
       <workItem from="1571894395303" duration="4829000" />
-      <workItem from="1571912860862" duration="8889000" />
+      <workItem from="1571912860862" duration="13159000" />
+      <workItem from="1572000381626" duration="37000" />
+      <workItem from="1572007122053" duration="1556000" />
+      <workItem from="1572031468926" duration="8921000" />
+      <workItem from="1572059552298" duration="624000" />
     </task>
     <task id="LOCAL-00001" summary="test pycharm">
       <created>1571881320019</created>
@@ -325,12 +320,14 @@
     <SUITE FILE_PATH="coverage/signLanguage$python.coverage" NAME="python Coverage Results" MODIFIED="1571803164664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLang$hand_detect_his.coverage" NAME="hand_detect_his Coverage Results" MODIFIED="1571956032172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLang$test_code_2.coverage" NAME="test_code_2 Coverage Results" MODIFIED="1571897422026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/signLang$his_hand_detect.coverage" NAME="his_hand_detect Coverage Results" MODIFIED="1571960489849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/signLang$his_hand_detect.coverage" NAME="his_hand_detect Coverage Results" MODIFIED="1572055060469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$delete.coverage" NAME="delete Coverage Results" MODIFIED="1571719307395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$test_code.coverage" NAME="test_code Coverage Results" MODIFIED="1571613702114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/signLang$delete.coverage" NAME="delete Coverage Results" MODIFIED="1571968533356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/signLang$testttt.coverage" NAME="testttt Coverage Results" MODIFIED="1572035571197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$run.coverage" NAME="run Coverage Results" MODIFIED="1571613417724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$assas.coverage" NAME="assas Coverage Results" MODIFIED="1571613797737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/signLang$test_code.coverage" NAME="test_code Coverage Results" MODIFIED="1571956028968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/signLang$test_code.coverage" NAME="test_code Coverage Results" MODIFIED="1571966934001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLang$hand_detect.coverage" NAME="hand_detect Coverage Results" MODIFIED="1571880618361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/signLanguage$hand_detect.coverage" NAME="hand_detect Coverage Results" MODIFIED="1571811334335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

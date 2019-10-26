@@ -4,8 +4,8 @@ import cv2 as cv
 import numpy as np
 
 
-src_base = cv.imread("pure_pict\\test_images\\rgb_cut_0.png")
-#src_base = cv.imread("pure_pict\\compare_images\\D\\rgb_cut_D0.png")
+#src_base = cv.imread("pure_pict\\test_images\\rgb_cut_0.png")
+src_base = cv.imread("pure_pict\\compare_images\\D\\rgb_cut_D0.png")
 src_test1 = cv.imread("pure_pict\\compare_images\\A\\rgb_cut_A1.png")
 src_test2 = cv.imread("pure_pict\\compare_images\\B\\rgb_cut_B0.png")
 if src_base is None or src_test1 is None or src_test2 is None:
