@@ -64,7 +64,9 @@ class signLanguageSave:
             self.ret, self.frame = self.camera.read()
             self.frame_cut = self.frame[150:400, 150:400]
             cv2.imshow("cut-screen", self.frame_cut)
+            cv2.putText(self.frame_cut, self.char[char_counter] + "-" +str(counter+1), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
             cv2.imshow("full-screen", self.frame)
+
 
             if cv2.waitKey(1) & 0xFF == ord("s"):
                 if self.choose == "1":
@@ -77,7 +79,7 @@ class signLanguageSave:
                     except:
                         print("Image Saved", self.char[char_counter], counter + 1 )
                     counter += 1
-                    if counter == 1:
+                    if counter == 15:
                         counter = 0
                         char_counter += 1
                     if char_counter == 5:
@@ -184,7 +186,6 @@ class signLanguageComp:
                         arr_2.append(i)
                         #print("arr_1 : ",len(arr_1),"  ", arr_1)
                         #print("arr_2 : ",len(arr_2),"  ", arr_2)
-                print(old)
                 if old == str(arr_2[arr_1.index(min(arr_1))]):
                     pass
                 else:
@@ -217,11 +218,8 @@ class signLanguageComp:
                     cv2.normalize(hist_test, hist_test, alpha=0, beta=1, norm_type=cv2.NORM_MINMAX)
 
                     base_test1 = cv2.compareHist(hist_base, hist_test, 3)
-                    print('Main - {} = {} '.format(char, base_test1))
                     arr.append(base_test1)
                 genel[char] = arr
-                print("--------------", self.char[arr.index(max(arr))], "--------------")
-            print(genel)
         else:
             pass
 
