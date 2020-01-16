@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 __author__ = "Ercan Sezdi"
-
+__version__ = 0.5
 import cv2
 import numpy as np
 import os
@@ -13,18 +13,19 @@ class signLanguageSave:
         self.choose = "3"
         try:
             while self.choose != "1" and self.choose != "2":
-                print("""
-                       1 - > Save compare images 
-                       2 - > Save test images 
-                       """)
-                print(">>", end="")
-                self.choose = input()
+                #self.choose = input()
+                self.choose = "1"
                 if self.choose != "1" and self.choose != "2":
                     print("Error Wrong Input")
         except:
             print("Error Wrong Input")
             sys.exit()
-        self.conf_prog()
+        try:
+            self.camera = cv2.VideoCapture(3)
+        except:
+            self.camera = cv2.VideoCapture(1)
+        self.char = ["A"]
+        #self.char = ["A", "B", "C", "D", "W"]
         self.mkdir()
 
     def mkdir(self):
@@ -40,16 +41,10 @@ class signLanguageSave:
             if not (os.path.exists("pure_pict/compare_images/" + i)):
                 os.mkdir("pure_pict/compare_images/" + i)
 
-    def conf_prog(self):
-        try:
-            self.camera = cv2.VideoCapture(3)
-        except:
-            self.camera = cv2.VideoCapture(1)
-        #self.char = ["C"]
-        self.char = ["A", "B", "C", "D", "W"]
 
     def start(self):
         counter = 0
+        #char_counter = len(self.char)
         char_counter = 0
         address = os.getcwd() + "\\pure_pict\\compare_images"
         images = os.listdir(address)
@@ -58,26 +53,22 @@ class signLanguageSave:
             num_x = address + "\\" + char
             num_x = os.listdir(num_x)
             sizes[char] = num_x
-
         while True:
 
             self.ret, self.frame = self.camera.read()
             self.frame_cut = self.frame[150:400, 150:400]
             cv2.imshow("cut-screen", self.frame_cut)
-            cv2.putText(self.frame_cut, self.char[char_counter] + "-" +str(counter+1), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
+            cv2.putText(self.frame, str(self.char[char_counter-1]) + "-" + str(counter  + 1 + len(sizes[self.char[char_counter-1 ]])), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
             cv2.imshow("full-screen", self.frame)
 
 
             if cv2.waitKey(1) & 0xFF == ord("s"):
                 if self.choose == "1":
-                    #cv2.imwrite("pure_pict\\compare_images\\" + self.char[char_counter] + "\\rgb_full_" + self.char[
-                    #    char_counter] + str(counter) + ".png", self.frame)
-                    cv2.imwrite("pure_pict\\compare_images\\" + self.char[char_counter] + "\\rgb_cut_" + self.char[
-                        char_counter] + str(len(sizes[self.char[char_counter]]) + counter) + ".png", self.frame_cut)
+                    cv2.imwrite("pure_pict\\compare_images\\" + self.char[char_counter - 1] + "\\rgb_cut_" + self.char[char_counter -1 ] + str(len(sizes[self.char[char_counter -1 ]]) + counter) + ".png", self.frame_cut)
                     try:
-                        print("Image Saved", self.char[char_counter], counter + 1+ int(sizes[self.char[char_counter]]))
+                        print("Image Saved", self.char[char_counter-1], counter + int(sizes[self.char[char_counter-1]]))
                     except:
-                        print("Image Saved", self.char[char_counter], counter + 1 )
+                        print("Image Saved", self.char[char_counter-1], counter  )
                     counter += 1
                     if counter == 15:
                         counter = 0
@@ -85,9 +76,8 @@ class signLanguageSave:
                     if char_counter == 5:
                         self.end()
                 elif self.choose == "2":
-                    cv2.imwrite("pure_pict\\test_images\\" + "\\rgb_full_" + str(counter) + ".png", self.frame)
-                    cv2.imwrite("pure_pict\\test_images\\" + "\\rgb_cut_" + str(counter) + ".png", self.frame_cut)
-                    print("Image Saved")
+                    cv2.imwrite("pure_pict\\test_images\\" + "\\rgb_full_" + str(counter + len(sizes[self.char[char_counter-1]])) + ".png", self.frame)
+                    cv2.imwrite("pure_pict\\test_images\\" + "\\rgb_cut_" + str(counter + len(sizes[self.char[char_counter-1]])) + ".png", self.frame_cut)
                     self.end()
                 else:
                     pass
@@ -108,7 +98,7 @@ class signLanguageComp:
                 """)
                 print(">>", end="")
                 self.choose = input()
-                # self.choose = "1"
+                #self.choose = "1"
                 if self.choose != "1" and self.choose != "2":
                     print("Error Wrong Input")
         except:
@@ -133,11 +123,10 @@ class signLanguageComp:
     def conf_prog(self):
         if self.choose == "1":
             try:
-                self.camera = cv2.VideoCapture(3)
+                self.camera = cv2.VideoCapture(1)
             except:
                 self.camera = cv2.VideoCapture(1)
-        self.char = ["A", "B", "C", "D", "W"]
-        print(self.char)
+        self.char = ["A", "B", "C", "D"]#, "W"]
 
     def compare(self):
         address = os.getcwd() + "\\pure_pict\\compare_images\\"
@@ -161,10 +150,14 @@ class signLanguageComp:
 
 
     def start(self):
-        old = False
+        old = "test"
         if self.choose == "1":
             datas = self.compare()
+            arry = []
+            compare_counter = 5
             while True:
+                if len(arry) == compare_counter:
+                    arry = []
 
                 self.ret, self.frame = self.camera.read()
                 self.frame_cut = self.frame[0:250, 0:250]
@@ -184,42 +177,24 @@ class signLanguageComp:
 
                         arr_1.append(base_test3)
                         arr_2.append(i)
-                        #print("arr_1 : ",len(arr_1),"  ", arr_1)
-                        #print("arr_2 : ",len(arr_2),"  ", arr_2)
                 if old == str(arr_2[arr_1.index(min(arr_1))]):
                     pass
                 else:
-                    old = str(arr_2[arr_1.index(min(arr_1))])
-                cv2.putText(self.frame_cut, old, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
+                    arry.append(str(arr_2[arr_1.index(min(arr_1))]))
+                if len(arry) == compare_counter:
+                    sayi = []
+                    for i in self.char:
+                        sayi.append(arry.count(i))
+                    if old != sayi.index(max(sayi)):
+                        old = self.char[sayi.index(max(sayi))]
+                cv2.putText(self.frame_cut, old, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 2,
+                            255)
                 cv2.imshow("cut-screen", self.frame_cut)
                 cv2.imshow("full-screen", self.frame)
 
                 if cv2.waitKey(1) & 0xFF == ord("q"):
                     self.end()
-        elif self.choose == "2":
-            img_1 = cv2.imread("pure_pict\\test_images\\rgb_cut_0.png")
-            address = os.getcwd() + "\\pure_pict\\compare_images"
-            images = os.listdir(address)
 
-            genel = {}
-            for char in images:
-                num_x = address + "\\" + char
-                arr = []
-                for num in range(1,len(num_x) + 1 ):
-
-                    img_2 = cv2.imread(address + "\\" + char + "\\rgb_cut_" + char + str(num) +".png")
-
-                    hsv_base = cv2.cvtColor(img_1, cv2.COLOR_BGR2HSV)
-                    hsv_test1 = cv2.cvtColor(img_2, cv2.COLOR_BGR2HSV)
-
-                    hist_base = cv2.calcHist([hsv_base], [0, 1], None, [50, 60], [0, 180, 0, 256], accumulate=False)
-                    cv2.normalize(hist_base, hist_base, alpha=0, beta=1, norm_type=cv2.NORM_MINMAX)
-                    hist_test = cv2.calcHist([hsv_test1], [0, 1], None, [50, 60], [0, 180, 0, 256], accumulate=False)
-                    cv2.normalize(hist_test, hist_test, alpha=0, beta=1, norm_type=cv2.NORM_MINMAX)
-
-                    base_test1 = cv2.compareHist(hist_base, hist_test, 3)
-                    arr.append(base_test1)
-                genel[char] = arr
         else:
             pass
 
@@ -235,7 +210,6 @@ if __name__ == "__main__":
                     """)
     print(">>", end="")
     choose = input()
-    #choose = "2"
     if choose == "1":
         st = signLanguageSave()
         st.start()

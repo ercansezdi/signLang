@@ -1,13 +1,6 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
-"""
-    ### Works ###
 
-    renk filtresi uygularken yeşil filtre sari ile karışıyor.
-    renk filtresi uygularken mavi filtre çok karıştırıyor.
-    renk filtresi uygularken siyah filtre algılaması çok az
-
-"""
 __author__ = "Ercan Sezdi"
 __version__ = 0.2
 

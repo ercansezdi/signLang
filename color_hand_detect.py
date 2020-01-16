@@ -100,7 +100,7 @@ class signLangSave:
         self.camera.release()
         cv2.destroyAllWindows()
 
-class signLangHis:
+class signLang:
     def __init__(self):
         self.pic_counter()
         self.loop()
@@ -122,4 +122,4 @@ class signLangHis:
                 counter += 1
             print(array)
 if __name__ == "__main__":
-    run = signLangHis()
+    run = signLang()
